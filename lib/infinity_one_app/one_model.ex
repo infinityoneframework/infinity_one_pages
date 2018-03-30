@@ -7,7 +7,7 @@ defmodule OneModel do
   defmacro __using__(opts) do
     quote do
       opts = unquote(opts)
-      @repo opts[:repo] || InfinityOne.Repo
+      @repo opts[:repo] || InfinityOneApp.Repo
       @schema opts[:schema] || raise(":schema option required")
 
       @type id :: integer | String.t

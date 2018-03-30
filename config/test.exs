@@ -13,7 +13,10 @@ config :logger, level: :warn
 config :infinity_one_app, InfinityOneApp.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
-  password: "",
   database: "infinity_one_app_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+if File.exists? "config/dev.secret.exs" do
+  import_config "dev.secret.exs"
+end

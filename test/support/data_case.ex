@@ -22,6 +22,7 @@ defmodule InfinityOneApp.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import InfinityOneApp.DataCase
+      import InfinityOneApp.TestHelpers
     end
   end
 
