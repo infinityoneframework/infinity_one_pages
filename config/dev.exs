@@ -41,6 +41,8 @@ config :infinity_one_app, InfinityOneAppWeb.Endpoint,
     ]
   ]
 
+# config :infinity_one_app, :github_poll_timer, 30
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 

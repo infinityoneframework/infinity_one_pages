@@ -12,6 +12,7 @@ defmodule InfinityOneApp.Application do
       supervisor(InfinityOneApp.Repo, []),
       # Start the endpoint when the application starts
       supervisor(InfinityOneAppWeb.Endpoint, []),
+      worker(InfinityOneApp.Github.Server, []),
       # Start your own worker by calling: InfinityOneApp.Worker.start_link(arg1, arg2, arg3)
       # worker(InfinityOneApp.Worker, [arg1, arg2, arg3]),
     ]
