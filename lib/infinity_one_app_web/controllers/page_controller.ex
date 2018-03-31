@@ -11,7 +11,7 @@ defmodule InfinityOneAppWeb.PageController do
       case Server.get() do
         {:ok, version} ->
           get_download_url(conn, version)
-        {:error, timeout} ->
+        {:error, _timeout} ->
           get_download_url(conn, Server.get_last())
       end
     render conn, templ, bindings
@@ -20,9 +20,9 @@ defmodule InfinityOneAppWeb.PageController do
   defp get_download_link(:mac, version), do: Version.get_mac_download_link(version)
   defp get_download_link(:win, version), do: Version.get_win_download_link(version)
   defp get_download_link(:linux, version), do: Version.get_linux_download_link(version)
-  defp get_download_link(platform, version) when is_atom(platform), do: nil
+  defp get_download_link(platform, _version) when is_atom(platform), do: nil
 
-  defp get_download_url(conn, nil) do
+  defp get_download_url(_conn, nil) do
     {"index.html", []}
   end
 

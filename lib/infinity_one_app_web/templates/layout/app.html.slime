@@ -1,0 +1,38 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content=""
+    meta name="author" content=""
+
+    title InfinityOne
+    link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
+
+  body
+    .portico-container data-platform="InfinityOneWeb"
+      .portico-web
+        .app.portico-header
+        .app.portico-page
+          .app-main.portico-page-container
+            nav.portico-header
+              .content
+                a.brand.logo href="#"
+                  img src="/images/logo.svg" style="width: 30px"
+                  span style="margin-left: 10px" InfinityOne
+                ul
+                  .exit x
+                  li
+                    a href="/" Home
+                  li.active
+                    a href="/apps" Apps
+            .gradients
+              .gradient.pattern
+              .gradient.sunburst
+              .gradient.dark-blue
+              .gradient.green
+              .gradient.blue
+              .gradient.white-fade
+            = render @view_module, @view_template, assigns
+    script src="#{static_path(@conn, "/js/app.js")}"

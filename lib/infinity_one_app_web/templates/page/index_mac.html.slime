@@ -1,4 +1,59 @@
-h2 Download page for Mac
-
-p
-  a href="#{@url}" rel="nofollow" Download
+.portico-container data-platform="InfinityOneWeb"
+  .portico-web
+    .app.portico-header
+    .app.portico-page
+      .app-main.portico-page-container
+        nav.portico-header
+          .content
+            a.brand.logo href="#"
+              img src="/images/logo.svg" style="width: 30px"
+              span style="margin-left: 10px" InfinityOne
+            ul
+              .exit x
+              li
+                a href="/" Home
+              li.active
+                a href="/apps" Apps
+        .gradients
+          .gradient.pattern
+          .gradient.sunburst
+          .gradient.dark-blue
+          .gradient.green
+          .gradient.blue
+          .gradient.white-fade
+        .portico-landing.apps.show
+          .hero
+            #waves
+            .inner-content
+              .info
+                .flex
+                  .cta
+                    h1
+                      = "InfinityOne for "
+                      span.platform macOS
+                    p.description
+                      | InfinityOne on macOS is even better than on the web. It has a cleaner
+                      | look, tray integration, native notifications, and support for multiple
+                      | InfinityOne accounts.
+                    p.download-instructions
+                      | For download instructions, go to the
+                      a.silver.bold href="/help/desktop-app-install-guide#installing-on-macos" target="_blank"
+                        | &nbsp; desktop app install guide
+                      | .
+                    a.link.no-action href="#{@url}" rel="nofollow"
+                      button type="button" name="button"
+                        | Download InfinityOne for &nbsp;
+                        span.platform
+                          | macOS
+              .image
+                .flex
+                  img src="/images/landing-page/macbook.png"
+          .other-apps
+            h2 Apps for many platforms.
+            .apps
+              a href="/apps/mac"
+                i.icon.fa.fa-apple data-label="macOS"
+              a href="/apps/windows"
+                i.icon.fa.fa-windows data-label="Windows"
+              a href="/apps/linux"
+                i.icon.fa.fa-linux data-label="Linux"
