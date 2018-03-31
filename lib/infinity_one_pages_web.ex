@@ -22,7 +22,7 @@ defmodule InfinityOnePagesWeb do
       use Phoenix.Controller, namespace: InfinityOnePagesWeb
       import Plug.Conn
       import InfinityOnePagesWeb.Router.Helpers
-      import InfinityOnePagesWeb.Gettext
+      use InfinityOnePagesWeb.Gettext
     end
   end
 
@@ -39,7 +39,7 @@ defmodule InfinityOnePagesWeb do
 
       import InfinityOnePagesWeb.Router.Helpers
       import InfinityOnePagesWeb.ErrorHelpers
-      import InfinityOnePagesWeb.Gettext
+      use InfinityOnePagesWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule InfinityOnePagesWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import InfinityOnePagesWeb.Gettext
+      use InfinityOnePagesWeb.Gettext
     end
   end
 

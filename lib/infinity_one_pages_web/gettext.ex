@@ -21,4 +21,16 @@ defmodule InfinityOnePagesWeb.Gettext do
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
   use Gettext, otp_app: :infinity_one_pages
+
+  defmacro __using__(_ \\ []) do
+    quote do
+      import unquote(__MODULE__)
+    end
+  end
+
+  defmacro sigil_g(text, _) do
+    quote do
+      gettext(unquote(text))
+    end
+  end
 end

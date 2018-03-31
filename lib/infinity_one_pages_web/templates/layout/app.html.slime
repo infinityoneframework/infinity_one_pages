@@ -25,7 +25,9 @@ html lang="en"
                   .exit x
                   li
                     a href="/" Home
-                  li.active
+                  li
+                    a href="/features" Features
+                  li
                     a href="/apps" Apps
             .gradients
               .gradient.pattern
