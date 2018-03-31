@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :infinity_one_app,
-  ecto_repos: [InfinityOneApp.Repo]
+config :infinity_one_pages,
+  ecto_repos: [InfinityOnePages.Repo]
 
 # Configures the endpoint
-config :infinity_one_app, InfinityOneAppWeb.Endpoint,
+config :infinity_one_pages, InfinityOnePagesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "2LBRBLwN149Kr1mrG4SzWkm4tiGl8VpkGnUwFpj1ibw+ozVxW39rftKeEpfQlNly",
-  render_errors: [view: InfinityOneAppWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: InfinityOneApp.PubSub,
+  render_errors: [view: InfinityOnePagesWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: InfinityOnePages.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

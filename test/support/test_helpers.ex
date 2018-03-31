@@ -1,4 +1,4 @@
-defmodule InfinityOneApp.TestHelpers do
+defmodule InfinityOnePages.TestHelpers do
 
   def strip_ts(schema) do
     struct schema, inserted_at: nil, updated_at: nil

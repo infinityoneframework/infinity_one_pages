@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :infinity_one_app, InfinityOneAppWeb.Endpoint,
+config :infinity_one_pages, InfinityOnePagesWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,17 +31,17 @@ config :infinity_one_app, InfinityOneAppWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :infinity_one_app, InfinityOneAppWeb.Endpoint,
+config :infinity_one_pages, InfinityOnePagesWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/infinity_one_app_web/views/.*(ex)$},
-      ~r{lib/infinity_one_app_web/templates/.*(eex|slim|slime)$}
+      ~r{lib/infinity_one_pages_web/views/.*(ex)$},
+      ~r{lib/infinity_one_pages_web/templates/.*(eex|slim|slime)$}
     ]
   ]
 
-# config :infinity_one_app, :github_poll_timer, 30
+# config :infinity_one_pages, :github_poll_timer, 30
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
@@ -51,10 +51,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :infinity_one_app, InfinityOneApp.Repo,
+config :infinity_one_pages, InfinityOnePages.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
-  database: "infinity_one_app_dev",
+  database: "infinity_one_pages_dev",
   hostname: "localhost",
   pool_size: 10
 

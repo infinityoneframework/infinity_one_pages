@@ -1,9 +1,9 @@
-defmodule InfinityOneApp.Mixfile do
+defmodule InfinityOnePages.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :infinity_one_app,
+      app: :infinity_one_pages,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -19,7 +19,7 @@ defmodule InfinityOneApp.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {InfinityOneApp.Application, []},
+      mod: {InfinityOnePages.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

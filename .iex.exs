@@ -1,1 +1,1 @@
-alias InfinityOneApp.{Github, Version}
+alias InfinityOnePages.{Github, Version}

@@ -1,4 +1,4 @@
-defmodule InfinityOneApp.Repo.Migrations.CreateAppVersions do
+defmodule InfinityOnePages.Repo.Migrations.CreateAppVersions do
   use Ecto.Migration
 
   def change do

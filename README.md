@@ -1,4 +1,4 @@
-# InfinityOneApp
+# InfinityOnePages
 
 To start your Phoenix server:
 

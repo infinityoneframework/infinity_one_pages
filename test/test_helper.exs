@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(InfinityOneApp.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(InfinityOnePages.Repo, :manual)
 

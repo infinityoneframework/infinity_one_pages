@@ -1,4 +1,4 @@
-defmodule InfinityOneAppWeb.ChannelCase do
+defmodule InfinityOnePagesWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule InfinityOneAppWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint InfinityOneAppWeb.Endpoint
+      @endpoint InfinityOnePagesWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(InfinityOneApp.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(InfinityOnePages.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(InfinityOneApp.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(InfinityOnePages.Repo, {:shared, self()})
     end
     :ok
   end
