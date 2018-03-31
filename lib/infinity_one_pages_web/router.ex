@@ -21,6 +21,8 @@ defmodule InfinityOnePagesWeb.Router do
     get "/apps", AppsController, :index
     get "/features", FeaturesController, :index
     get "/why", WhyController, :index
+    get "/help", HelpController, :index
+    get "/help/:id", HelpController, :show
   end
 
   # Other scopes may use custom stacks.

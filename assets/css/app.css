@@ -1,1 +1,16 @@
-/* This file is for your main application css. */
+.portico-landing .full-width {
+  position: relative;
+  margin-top: 30px;
+  height: 600px;
+}
+.portico-landing .full-width .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50px;
+  right: -50px;
+  background-image: url(/images/mobile.jpg);
+}
+.help .header {
+  display: block;
+}

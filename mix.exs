@@ -47,6 +47,7 @@ defmodule InfinityOnePages.Mixfile do
       {:httpoison, "~> 0.13", override: true},
       {:poison, "3.1.0", override: true},
       {:tempfile, "~> 0.1.0"},
+      {:phoenix_markdown, "~> 1.0"},
     ]
   end
 

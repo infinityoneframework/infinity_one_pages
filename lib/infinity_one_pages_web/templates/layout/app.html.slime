@@ -24,11 +24,13 @@ html lang="en"
                 ul
                   .exit x
                   li
-                    a href="/" Home
+                    a href="/" = gettext("Home")
                   li
-                    a href="/features" Features
+                    a href="/features" = gettext("Features")
                   li
-                    a href="/apps" Apps
+                    a href="/apps" = gettext("Apps")
+                  li
+                    a href="/help" = gettext("Documentation")
             .gradients
               .gradient.pattern
               .gradient.sunburst
