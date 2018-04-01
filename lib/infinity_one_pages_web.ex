@@ -31,6 +31,8 @@ defmodule InfinityOnePagesWeb do
       use Phoenix.View, root: "lib/infinity_one_pages_web/templates",
                         namespace: InfinityOnePagesWeb
 
+      require Logger
+      Logger.warn "cwd: " <> File.cwd!()
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
