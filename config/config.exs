@@ -26,6 +26,11 @@ config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine,
   md: PhoenixMarkdown.Engine
+
+# Run the application in standalone mode.
+# add this to your project and set to false if running as a dependency
+config :infinity_one_pages, :standalone, true
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

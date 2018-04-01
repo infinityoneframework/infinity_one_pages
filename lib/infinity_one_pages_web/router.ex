@@ -1,6 +1,24 @@
 defmodule InfinityOnePagesWeb.Router do
   use InfinityOnePagesWeb, :router
 
+  defmacro __using__(_) do
+    quote do
+      import unquote(__MODULE__), only: [infinity_one_pages_routes: 0]
+    end
+  end
+
+  defmacro infinity_one_pages_routes do
+    quote do
+      get "/", PageController, :index
+      get "/apps/:id", AppsController, :show
+      get "/apps", AppsController, :index
+      get "/features", FeaturesController, :index
+      get "/why", WhyController, :index
+      get "/help", HelpController, :index
+      get "/help/:id", HelpController, :show
+    end
+  end
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
