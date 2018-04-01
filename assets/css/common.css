@@ -18,3 +18,13 @@ body {
   color: hsl(0,0%,27%);
   line-height: normal;
 }
+
+a {
+  text-decoration: none;
+}
+a.disabled {
+  cursor: default;
+}
+a.disabled:hover {
+  text-decoration: none;
+}

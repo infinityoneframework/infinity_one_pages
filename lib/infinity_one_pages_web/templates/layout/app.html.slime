@@ -12,7 +12,7 @@ html lang="en"
 
   body
     .portico-container data-platform="InfinityOneWeb"
-      .portico-web
+      .portico-wrap
         .app.portico-header
         .app.portico-page
           .app-main.portico-page-container
@@ -39,4 +39,5 @@ html lang="en"
               .gradient.blue
               .gradient.white-fade
             = render @view_module, @view_template, assigns
+      = render("footer.html")
     script src="#{static_path(@conn, "/js/app.js")}"
