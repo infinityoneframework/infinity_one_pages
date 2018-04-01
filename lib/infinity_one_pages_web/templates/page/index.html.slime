@@ -6,4 +6,286 @@
         = home_intro()
     .full-width
       .image style="background-image: url(/images/mobile.jpg);"
-
+  .screen.hero-screen
+    .main-page
+      .left-sidebar.col-4
+        .action-block
+          .line.med
+          .line
+          .line
+          .line.med
+        .action-block
+          .line.small.red
+          .sub-block
+            .line.small
+            .line
+            .line.med
+            .line.med
+          .line.blue
+          .sub-block
+            .line.small
+            .line
+            .line.small
+          .line.green
+          .sub-block
+            .line
+            .line.med
+            .line.small
+            .line.med
+            .line
+          .line.med.orange
+          .sub-block
+            .line.med
+      .center-page.col-2
+        .message-feed style="transform: translateY(-61.6px);"
+          .stream
+            .line.micro.red
+            .line.nano
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line
+                .line
+                .line.med
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line.med
+                .line.small
+          .stream
+            .line.micro.green
+            .line.nano
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line
+                .line.small
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line.med
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line
+                .line.small
+          .stream
+            .line.micro.blue
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line.med
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line.med
+                .line.small
+                .line.small
+          .stream
+            .line.micro.green
+            .line.nano
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line
+                .line.small
+                .line.med
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line
+                .line.small
+            .message
+              .top
+                .avatar
+                .line.top-line
+              .content
+                .line.med
+      .right-sidebar.col-4
+        .action-block
+          .line.small.darker
+          .line
+          .line
+          .line.med
+          .line
+          .line
+          .line.med
+          .line.med
+          .line
+          .line.med
+          .line.med
+          .line
+        .action-block
+          .line.small.darker
+          .line
+          .line.med
+          .line
+          .line.med
+          .line.med
+  .features
+    header
+    .content
+      .center
+        h2 Two Versions to choose from
+        br
+        br
+      .col-2
+        img src="/images/chat-icon.png"
+        .il-block
+          h2 Standalone Open source version
+          p
+            | lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            | tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,
+            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat. duis aute irure dolor in reprehenderit in voluptate velit esse
+            | rillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non
+            | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .col-2
+        img src="/images/devide_cloud.png"
+        .il-block
+          h2 UCx Phone Server Embedded
+          p
+            | lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            | tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,
+            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat. duis aute irure dolor in reprehenderit in voluptate velit esse
+            | rillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non
+            | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p And more here
+  .apps
+    .triangle
+    .left-side
+      .content
+        header: h1 = gettext("Apps for every platform")
+        p = gettext("InfinityOne has modern apps for all the major platforms, powered by Electron and React Native.")
+        br
+      .platform-icons
+        .group
+          h2 = gettext("Web")
+          a href="/apps"
+            i.icon-vector-desktop.platform-icon
+        .group
+          h2 = gettext("Desktop")
+          a href="/apps/mac"
+            i.icon-vector-apple.platform-icon
+          a href="/apps/win"
+            i.icon-vector-windows.platform-icon
+          a href="/apps/linux"
+            i.icon-vector-linux.platform-icon
+        .group
+          h2 = gettext("Mobile")
+          a
+            i.icon-vector-phone.platform-icon
+          a
+            i.icon-vector-android.platform-icon
+    .right-side
+      .screen.ios
+        .main-page
+          .navbar
+          .center-page
+            .message-feed
+              .stream
+                .line.micro.red
+                .line.nano
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line
+                    .line
+                    .line.med
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line.med
+                    .line
+                    .line.small
+              .stream
+                .line.micro.blue
+                .line.nano
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line.med
+                    .line.med
+                    .line.small
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line
+                    .line
+                    .line.small
+      .screen.android
+        .main-page
+          .navbar
+          .center-page
+            .message-feed
+              .stream
+                .line.micro.red
+                .line.nano
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line
+                    .line
+                    .line.med
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line.med
+                    .line
+                    .line.small
+              .stream
+                .line.micro.blue
+                .line.nano
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line.med
+                    .line.med
+                    .line.small
+                .message
+                  .top
+                    .avatar
+                    .line.top-line
+                  .content
+                    .line
+                    .line
+                    .line.small
+  .padded-content.call-to-action-bottom
+    h1 = gettext("Experience InfinityOne today!")
+    a title="Coming soon"
+      button.download-button type="button" name="button"
+        = gettext("See plans and pricing!")
+    .infinityone-symbol

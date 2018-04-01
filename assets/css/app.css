@@ -14,3 +14,10 @@
 .help .header {
   display: block;
 }
+.infinityone-symbol {
+  margin: 130px auto 0 auto;
+  width: 30px;
+  height: 30px;
+  background-image: url(/images/infinityone.png);
+  background-size: cover;
+}
