@@ -1,5 +1,5 @@
 doctype html
-html.js.no-touch.cssanimations.csstransitions.csscalc.noscroll(lang="en")
+html lang="en"
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -12,18 +12,15 @@ html.js.no-touch.cssanimations.csstransitions.csscalc.noscroll(lang="en")
     title= site_title()
     link(href="/favicon1.ico" rel="shortcut icon" type="image/x-icon")
     link(href="/favicon1.ico" rel="icon" type="image/x-icon")
-    link(rel="stylesheet" href='#{static_path(@conn, "/fonts/fontello/css/fontello.css")}')
     link(rel="stylesheet" href='#{static_path(@conn, "/css/infinity_one_pages.css")}')
 
     link(rel="apple-touch-icon" href="/images/logo_globe.png")
-    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"
-
     script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
 
   body
     .portico-container.help
       .portico-wrap
-        = InfinityOnePagesWeb.HelpView.render("portico-header.html")
+        = InfinityOnePagesWeb.HelpView.render("portico-header.html", conn: @conn)
         .app.portico-page
           .app-main.portico-page-container
             .app.help.terms-page.inline-block
@@ -37,8 +34,6 @@ html.js.no-touch.cssanimations.csstransitions.csscalc.noscroll(lang="en")
                 .content
                   = render @view_module, @view_template, assigns
 
-  script(src='#{static_path(@conn, "/js/vendor.js")}')
-  script(src='#{static_path(@conn, "/js/app.js")}')
-  javascript:
-    // require('./help');
-  script(src='#{static_path(@conn, "/js/infinity_one_pages_vendor.js")}')
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+  script(src='#{static_path(@conn, "/js/help.js")}')
+  script(src='#{static_path(@conn, "/js/header.js")}')

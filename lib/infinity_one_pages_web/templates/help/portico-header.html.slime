@@ -19,3 +19,4 @@
                 | API Documentation
 
     .column-right.top-links
+      = InfinityOnePagesWeb.LayoutView.render("logged_in.html", conn: @conn)

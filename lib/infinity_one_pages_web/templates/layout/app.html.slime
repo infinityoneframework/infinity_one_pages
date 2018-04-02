@@ -29,6 +29,7 @@ html lang="en"
                     a href="/features" = gettext("Features")
                   li
                     a href="/apps" = gettext("Apps")
+                  = render("logged_in.html", conn: @conn)
             .gradients
               .gradient.pattern
               .gradient.sunburst
@@ -38,4 +39,6 @@ html lang="en"
               .gradient.white-fade
             = render @view_module, @view_template, assigns
       = render("footer.html")
-    script src="#{static_path(@conn, "/js/infinity_one_pages.js")}"
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+    script src="#{static_path(@conn, "/js/help.js")}"
+    script src="#{static_path(@conn, "/js/header.js")}"
