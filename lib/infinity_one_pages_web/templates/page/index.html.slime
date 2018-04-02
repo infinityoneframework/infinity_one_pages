@@ -4,8 +4,6 @@
       header
         h1 = gettext("Highly Reliable Communications")
         = home_intro()
-    .full-width
-      .image style="background-image: url(/images/mobile.jpg);"
   .screen.hero-screen
     .main-page
       .left-sidebar.col-4
@@ -140,6 +138,9 @@
           .line
           .line.med
           .line.med
+
+  .full-width
+    .image style="background-image: url(/images/mobile.jpg);"
   .features
     header
     .content
@@ -152,24 +153,33 @@
         .il-block
           h2 Standalone Open source version
           p
-            | lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,
-            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            | consequat. duis aute irure dolor in reprehenderit in voluptate velit esse
-            | rillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non
-            | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            | InfinityOne is a free and Open Source project, meaning that you can download
+             the source code and customize it at will. Need a new feature, new extension,
+             or new integration. No problem. Download and modify the code as needed.
+          p
+            | Leverage the open source community to get new features and bug fixes frequently.
+          p
+            | InfinityOne is backed by
+            a href="https://emetrotel.com" target="_blank"
+              | &nbsp;E-MetroTel&nbsp;
+            | and is part of their commercial IP-PBX offering, giving you the confidence
+             that development and bug fix will continue for years to come.
       .col-2
         img src="/images/devide_cloud.png"
         .il-block
           h2 UCx Phone Server Embedded
           p
-            | lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,
-            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            | consequat. duis aute irure dolor in reprehenderit in voluptate velit esse
-            | rillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non
-            | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          p And more here
+            a href="https://emetrotel.com" target="_blank"
+              | E-MetroTel's&nbsp;
+            | UCx IP-PBX products include InfinityOne integrated into their on-premise
+             appliance, bring your own server, and cloud-based solutions. These products
+             include an enterprise class WebRTC soft-client, phone presence, and
+             click-to-call capabilities with several commercial support options.
+          p
+            | Get the benefit of team chat integrated with a soft-phone, including 100's
+             of enterprise phone features right in your browser, or even better yet, with
+             one of the native applications.
+
   .apps
     .triangle
     .left-side
