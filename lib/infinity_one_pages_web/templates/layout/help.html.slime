@@ -32,7 +32,7 @@ html.js.no-touch.cssanimations.csstransitions.csscalc.noscroll(lang="en")
                   a.no-underline.highlighted href="/help" = gettext("Index")
                 = InfinityOnePagesWeb.HelpView.render("sidebar.html")
                 h1.home-link
-                  a.no-underline href="/" = gettext("Back to Home")
+                  a.no-underline href="/pages" = gettext("Back to Home")
               .markdown.ps.ps--active-y
                 .content
                   = render @view_module, @view_template, assigns

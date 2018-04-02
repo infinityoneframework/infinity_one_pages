@@ -9,7 +9,7 @@ defmodule InfinityOnePagesWeb.Router do
 
   defmacro infinity_one_pages_routes do
     quote do
-      get "/", PageController, :index
+      get "/pages", PageController, :index
       get "/apps/:id", AppsController, :show
       get "/apps", AppsController, :index
       get "/features", FeaturesController, :index

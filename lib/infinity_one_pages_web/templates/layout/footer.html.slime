@@ -2,7 +2,7 @@
   section
     h3 = gettext("About InfinityOne")
     ul
-      li: a href="/" = gettext("Home")
+      li: a href="/pages" = gettext("Home")
       li: a.disabled = gettext("Why InfinityOne")
       li: a href="/features" = gettext("Features")
   section

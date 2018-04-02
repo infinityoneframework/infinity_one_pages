@@ -24,7 +24,7 @@ html lang="en"
                 ul
                   .exit x
                   li
-                    a href="/" = gettext("Home")
+                    a href="/pages" = gettext("Home")
                   li
                     a href="/features" = gettext("Features")
                   li
