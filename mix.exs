@@ -48,6 +48,7 @@ defmodule InfinityOnePages.Mixfile do
       {:poison, "3.1.0", override: true},
       {:tempfile, "~> 0.1.0"},
       {:phoenix_markdown, "~> 1.0"},
+      {:one_model, github: "infinityoneframework/one_model"}
     ]
   end
 
