@@ -29,8 +29,6 @@ html lang="en"
                     a href="/features" = gettext("Features")
                   li
                     a href="/apps" = gettext("Apps")
-                  li
-                    a href="/help" = gettext("Documentation")
             .gradients
               .gradient.pattern
               .gradient.sunburst

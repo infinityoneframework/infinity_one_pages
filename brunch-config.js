@@ -1,5 +1,4 @@
 exports.config = {
-  sourceMaps: false,
   production: true,
 
   modules: {
@@ -7,6 +6,8 @@ exports.config = {
     autoRequire: {
       "dist/js/infinity_one_pages.js": [
         "js/infinity_one_pages",
+        // "js/help",
+        // "node_modules/perfect-scollbar"
      ]
     }
   },
@@ -16,15 +17,17 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: {
-        "js/infinity_one_pages.js": /^(assets\/js|node_modules)/,
-        "js/vendor.js": /^(assets\/vendor)/
-      },
-      stylesheets: {
-        joinTo: {
-          "css/infinity_one_pages.css": [
-            /^assets\/(css|scss)/
-          ]
-        }
+        // "js/infinity_one_pages.js": /^(assets)/,
+        "js/infinity_one_pages.js": "assets/js/infinity_one_pages.js",
+        // "js/help.js": "assets/js/help.js",
+        // "js/infinity_one_pages.js": /^(assets\/js|node_modules)/,
+        "js/infinity_one_pages_vendor.js": /^(assets\/vendor|node_modules)/
+      }
+    },
+    stylesheets: {
+      joinTo: {
+        "css/infinity_one_pages.css": /^(assets\/?css|node_modules\/perfect-scrollbar\/css)/
+        // "css/infinity_one_pages.css": ['assets/**/*.?css']
       }
     }
   },
@@ -38,11 +41,11 @@ exports.config = {
     // Which directories to watch
     watched: [
       "assets/static",
-      "assets/third",
       "assets/css",
       "assets/scss",
       "assets/js",
-      "assets/vendor"
+      "assets/vendor",
+      // "node_modules/perfect-scrollbar"
     ],
 
     // Where to compile files to
@@ -53,7 +56,8 @@ exports.config = {
   plugins: {
     babel: {
       // Do not use ES6 compiler in vendor code
-      ignore: [/^(assets\/vendor)/]
+      ignore: [/^(assets\/vendor)/],
+      presets: ["env"]
     },
     postcss: {
       processors: [

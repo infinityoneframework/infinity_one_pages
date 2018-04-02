@@ -137,7 +137,7 @@ body {
     border-right: 1px solid hsl(219, 10%, 97%);
     overflow: auto;
 
-    background-color: hsl(153, 32%, 55%);
+    background-color: #b1c368;
     color: hsl(0, 0%, 100%);
 
     -webkit-overflow-scrolling: touch;
@@ -159,7 +159,7 @@ body {
 }
 
 .help .sidebar h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.05;
     margin-bottom: 5px;
 }
@@ -177,7 +177,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     content: "\f107";
-    margin-right: 5px;
+    margin-right: 3px;
+    margin-left: -6px;
 
     opacity: 0.5;
 }
@@ -226,7 +227,7 @@ body {
 }
 
 .help .sidebar a.highlighted {
-    background-color: hsl(152, 40%, 42%);
+    background-color: #8dae37;
 
     /* Extend highlight to entire width of sidebar, not just link area */
     /* This has been changed from "+" to "- -" because of issue #8403.
@@ -288,7 +289,8 @@ body {
     vertical-align: top;
     padding: 3px 6.5px 3px 7.5px;
     margin-right: 5px;
-    background-color: hsl(170, 47%, 54%);
+    background-color: #8dae37;
+    /*background-color: hsl(170, 47%, 54%);*/
     color: white;
     border-radius: 100%;
     font-size: 0.9em;
@@ -626,6 +628,7 @@ input.text-error {
 .header-main .logo pipe {
     position: relative;
     top: -1px;
+    margin-left: 3px;
 }
 
 .header-main .logo .brand-logo {
@@ -639,7 +642,8 @@ input.text-error {
     margin-top: 8px;
     margin-left: 10px;
 
-    color: #fff;
+    /*color: #fff;*/
+    color: #333;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -1518,7 +1522,8 @@ input.new-organization-button {
 }
 
 .markdown a {
-    color: hsl(176, 46%, 41%);
+    color: #8dae37;
+    /*color: hsl(176, 46%, 41%);*/
     font-weight: 600;
 }
 
@@ -1790,6 +1795,7 @@ input.new-organization-button {
         transition: all 0.3s ease;
         overflow: hidden;
         height: 100vh;
+        padding-left: 0;
     }
 
     .app.help .sidebar.show {

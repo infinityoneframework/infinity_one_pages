@@ -13,7 +13,6 @@
 // to also remove its path from "config.paths.watched".
 // import "phoenix_html"
 
-import "./help"
 // Import local files
 //
 // Local files can be imported directly using relative

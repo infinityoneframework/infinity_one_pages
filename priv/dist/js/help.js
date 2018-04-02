@@ -1,17 +1,58 @@
-import PerfectScrollbar from 'perfect-scrollbar';
+
+(function() {
+var global = typeof window === 'undefined' ? this : window;
+var __makeRelativeRequire = function(require, mappings, pref) {
+  var none = {};
+  var tryReq = function(name, pref) {
+    var val;
+    try {
+      val = require(pref + '/node_modules/' + name);
+      return val;
+    } catch (e) {
+      if (e.toString().indexOf('Cannot find module') === -1) {
+        throw e;
+      }
+
+      if (pref.indexOf('node_modules') !== -1) {
+        var s = pref.split('/');
+        var i = s.lastIndexOf('node_modules');
+        var newPref = s.slice(0, i).join('/');
+        return tryReq(name, newPref);
+      }
+    }
+    return none;
+  };
+  return function(name) {
+    if (name in mappings) name = mappings[name];
+    if (!name) return;
+    if (name[0] !== '.' && pref) {
+      var val = tryReq(name, pref);
+      if (val !== none) return val;
+    }
+    return require(name);
+  }
+};
+require.register("assets/js/help.js", function(exports, require, module) {
+"use strict";
+
+var _perfectScrollbar = require("perfect-scrollbar");
+
+var _perfectScrollbar2 = _interopRequireDefault(_perfectScrollbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function registerCodeSection($codeSection) {
-    const $li = $codeSection.find("ul.nav li");
-    const $blocks = $codeSection.find(".blocks div");
+    var $li = $codeSection.find("ul.nav li");
+    var $blocks = $codeSection.find(".blocks div");
 
     $li.click(function () {
-        const language = this.dataset.language;
+        var language = this.dataset.language;
 
         $li.removeClass("active");
-        $li.filter("[data-language="+language+"]").addClass("active");
+        $li.filter("[data-language=" + language + "]").addClass("active");
 
         $blocks.removeClass("active");
-        $blocks.filter("[data-language="+language+"]").addClass("active");
+        $blocks.filter("[data-language=" + language + "]").addClass("active");
     });
 
     $li.eq(0).click();
@@ -24,20 +65,13 @@ function highlight_current_article() {
     if (!path) {
         return;
     }
-console.log('path', path, path[0]);
+    console.log('path', path, path[0]);
     var article = $('.help .sidebar a[href="' + path[0] + '"]');
     article.addClass('highlighted');
 }
 
 function adjust_mac_shortcuts() {
-    var keys_map = new Map([
-        ['Backspace', 'Delete'],
-        ['Enter', 'Return'],
-        ['Home', 'Fn + ⇽'],
-        ['End', 'Fn + ⇾'],
-        ['PgUp', 'Fn + ↑'],
-        ['PgDn', 'Fn + ↓'],
-    ]);
+    var keys_map = new Map([['Backspace', 'Delete'], ['Enter', 'Return'], ['Home', 'Fn + ⇽'], ['End', 'Fn + ⇾'], ['PgUp', 'Fn + ↑'], ['PgDn', 'Fn + ↓']]);
 
     $(".markdown .content code").each(function () {
         var text = $(this).text();
@@ -81,10 +115,10 @@ function scrollToHash(container) {
 (function () {
     var html_map = {};
     var loading = {
-        name: null,
+        name: null
     };
 
-    var fetch_page = function (path, callback) {
+    var fetch_page = function fetch_page(path, callback) {
         $.get(path, function (res) {
             var $html = $(res).find(".markdown .content");
             $html.find(".back-to-home").remove();
@@ -94,18 +128,18 @@ function scrollToHash(container) {
         });
     };
 
-    var markdownPS = new PerfectScrollbar($(".markdown")[0], {
+    var markdownPS = new _perfectScrollbar2.default($(".markdown")[0], {
         suppressScrollX: true,
         useKeyboard: false,
         wheelSpeed: 0.68,
-        scrollingThreshold: 50,
+        scrollingThreshold: 50
     });
 
-    new PerfectScrollbar($(".sidebar")[0], {
+    new _perfectScrollbar2.default($(".sidebar")[0], {
         suppressScrollX: true,
         useKeyboard: false,
         wheelSpeed: 0.68,
-        scrollingThreshold: 50,
+        scrollingThreshold: 50
     });
 
     $(".sidebar.slide h2").click(function (e) {
@@ -194,4 +228,15 @@ function scrollToHash(container) {
     // to the right place.
     var container = $(".markdown")[0];
     scrollToHash(container);
-}());
+    // function init() {}
+    // module.exports = init;
+})();
+
+});
+
+require.register("___globals___", function(exports, require, module) {
+  
+});})();require('___globals___');
+
+
+//# sourceMappingURL=help.js.map

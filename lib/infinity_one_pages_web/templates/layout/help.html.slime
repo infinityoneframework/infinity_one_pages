@@ -37,6 +37,8 @@ html.js.no-touch.cssanimations.csstransitions.csscalc.noscroll(lang="en")
                 .content
                   = render @view_module, @view_template, assigns
 
-  script(src='#{static_path(@conn, "/js/infinity_one_pages.js")}')
   script(src='#{static_path(@conn, "/js/vendor.js")}')
-  =# Rebel.Client.js @conn, conn_opts: [landing: true]
+  script(src='#{static_path(@conn, "/js/app.js")}')
+  javascript:
+    // require('./help');
+  script(src='#{static_path(@conn, "/js/infinity_one_pages_vendor.js")}')
